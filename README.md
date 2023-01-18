@@ -6,9 +6,9 @@ Install dependencies with `npm install`.
 
 ## Screenshots
 
-!["Hovering over appointment"]()
-!["Creating new appointment"]()
-!["Full day"]()
+!["Hovering over appointment"](https://github.com/erikwehrmann/scheduler/blob/master/public/images/HoverOverAppointment.png)
+!["Creating new appointment"](https://github.com/erikwehrmann/scheduler/blob/master/public/images/CreateAppointment.png)
+!["Full day"](https://github.com/erikwehrmann/scheduler/blob/master/public/images/FullDay.png)
 
 
 ## Running Webpack Development Server
