@@ -4,6 +4,13 @@
 
 Install dependencies with `npm install`.
 
+## Screenshots
+
+!["Hovering over appointment"]()
+!["Creating new appointment"]()
+!["Full day"]()
+
+
 ## Running Webpack Development Server
 
 ```sh

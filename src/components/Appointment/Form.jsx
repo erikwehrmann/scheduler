@@ -6,20 +6,20 @@ import React, { useState } from "react";
 import InterviewerList from "components/InterviewerList";
 import Button from "components/Button";
 
-export default function Form (props) {
+export default function Form(props) {
   const [student, setStudent] = useState(props.student || "");
   const [interviewer, setInterviewer] = useState(props.interviewer || null);
   const [error, setError] = useState("");
 
-  const reset = function () {
+  function reset() {
     setStudent("");
     setInterviewer(null);
+  }
 
-  };
-  const cancel = function () {
+  function cancel() {
     reset();
     props.onCancel();
-  };
+  }
 
   function validate() {
     if (student === "") {
@@ -27,11 +27,11 @@ export default function Form (props) {
       return;
     }
 
-    if(interviewer === null) {
+    if (interviewer === null) {
       setError("Please select an interviewer");
       return;
     }
-    
+
     setError("");
     props.onSave(student, interviewer);
   }
@@ -39,7 +39,7 @@ export default function Form (props) {
   return (
     <main className="appointment__card appointment__card--create">
       <section className="appointment__card-left">
-        <form autoComplete="off" onSubmit={event => event.preventDefault()}>
+        <form autoComplete="off" onSubmit={(event) => event.preventDefault()}>
           <input
             className="appointment__create-input text--semi-bold"
             name="name"
@@ -51,7 +51,7 @@ export default function Form (props) {
           />
         </form>
         <section className="appointment__validation">{error}</section>
-        <InterviewerList 
+        <InterviewerList
           interviewers={props.interviewers}
           value={interviewer ? interviewer : props.interviewer}
           onChange={(event) => setInterviewer(event)}
@@ -59,8 +59,12 @@ export default function Form (props) {
       </section>
       <section className="appointment__card-right">
         <section className="appointment__actions">
-          <Button danger onClick={() => cancel()}>Cancel</Button>
-          <Button confirm onClick={() => validate()} data-testid="Save-Button">Save</Button>
+          <Button danger onClick={() => cancel()}>
+            Cancel
+          </Button>
+          <Button confirm onClick={() => validate()} data-testid="Save-Button">
+            Save
+          </Button>
         </section>
       </section>
     </main>
