@@ -2,12 +2,12 @@ import React from "react";
 
 export default function Show (props) {
   return (
-    <main className="appointment__card appointment__card--show">
+    <main className="appointment__card appointment__card--show" data-testid="Appointment-Card">
       <section className="appointment__card-left">
-        <h2 className="text--regular">{props.student}</h2>
+        <h2 className="text--regular" data-testid="Student">{props.student}</h2>
         <section className="interviewer">
           <h4 className="text--light">Interviewer</h4>
-          <h3 className="text--regular">{props.interviewer.name}</h3>
+          <h3 className="text--regular" data-testid="Interviewer">{props.interviewer.name}</h3>
         </section>
       </section>
       <section className="appointment__card-right">
@@ -17,12 +17,14 @@ export default function Show (props) {
             src="images/edit.png"
             alt="Edit"
             onClick={props.onEdit}
+            data-testid="Edit-Button"
           />
           <img
             className="appointment__actions-button"
             src="images/trash.png"
             alt="Delete"
             onClick={() => props.onDelete(props.student, props.interviewer)}
+            data-testid="Delete-Button"
           />
         </section>
       </section>

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "axios": "^1.2.2",
+    "axios": "^0.20.0",
     "classnames": "^2.2.6",
     "normalize.css": "^8.0.1",
     "react": "^16.9.0",
@@ -11,13 +11,15 @@
     "react-hooks": "^1.0.1",
     "react-scripts": "3.4.4"
   },
+  "type": "module",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public --ci",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "cypress": "cypress open -P ."
   },
   "browserslist": {
     "production": [
@@ -42,6 +44,7 @@
     "@testing-library/react": "^8.0.7",
     "@testing-library/react-hooks": "^8.0.1",
     "babel-loader": "8.1.0",
+    "prop-types": "^15.8.1",
     "react-test-renderer": "^16.14.0",
     "sass": "^1.53.0"
   },
